@@ -6,6 +6,15 @@ const { execSync } = require('child_process');
 
 console.log('Building for Netlify deployment...');
 
+// Install dependencies first
+console.log('Installing dependencies...');
+try {
+  execSync('npm ci', { stdio: 'inherit' });
+} catch (error) {
+  console.log('npm ci failed, trying npm install...');
+  execSync('npm install', { stdio: 'inherit' });
+}
+
 // Create temporary HTML file for Netlify build
 const netlifyHTML = `<!doctype html>
 <html lang="en">
@@ -27,7 +36,7 @@ fs.writeFileSync('client/index-netlify.html', netlifyHTML);
 
 // Run Vite build with Netlify config
 try {
-  execSync('vite build --config vite.config.netlify.ts', { 
+  execSync('npx vite build --config vite.config.netlify.ts', { 
     stdio: 'inherit',
     env: { ...process.env, NODE_ENV: 'production' }
   });
@@ -38,7 +47,9 @@ try {
 }
 
 // Clean up temporary file
-fs.unlinkSync('client/index-netlify.html');
+if (fs.existsSync('client/index-netlify.html')) {
+  fs.unlinkSync('client/index-netlify.html');
+}
 
 console.log('🚀 Ready for Netlify deployment!');
 console.log('📁 Upload the dist/public folder to Netlify');
