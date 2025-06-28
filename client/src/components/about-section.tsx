@@ -13,16 +13,13 @@ export default function AboutSection() {
           <div className="order-1 lg:order-1">
             <div className="prose prose-lg max-w-none">
               <p className="text-chess-gray leading-relaxed mb-6">
-                I'm a Chess National Master with a USCF rating of 2265 and a rising sophomore in high school. 
-                My passion lies in both competitive chess and mathematics, where I've achieved recognition at state and national levels.
+                I'm a Chess National Master and a rising sophomore in high school. My main focus areas are competitive chess and mathematics, where I've dedicated years to developing strategic thinking and problem-solving skills through tournaments and competitions.
               </p>
               <p className="text-chess-gray leading-relaxed mb-6">
-                Beyond chess, I excel in competitive mathematics. I placed 1st in Math Kangaroo in 4th grade, won my school's MOEMS competition in elementary school, achieved the Achievement Roll in AMC 8, and won the middle school MOEMS with an outstanding score of 24/25. I aspire to qualify for AIME and continue advancing in prestigious mathematics competitions.
+                Alongside chess and math, I also compete in varsity badminton and have developed a strong interest in programming, computer science, and artificial intelligence. I'm fascinated by how technology can solve complex problems and augment human capabilities, finding that the logical reasoning required in coding complements my chess and mathematical background.
               </p>
               <p className="text-chess-gray leading-relaxed mb-8">
-                As a dedicated instructor, I specialize in chess coaching for players from beginner to expert level, 
-                and AMC 8 preparation for aspiring young mathematicians. My approach combines strategic thinking, 
-                pattern recognition, and competitive mindset development.
+                As a dedicated instructor, I specialize in chess coaching for players from beginner to expert level, and AMC 8 preparation for aspiring young mathematicians. My teaching approach combines strategic thinking, pattern recognition, and competitive mindset development, drawing from my diverse experiences across multiple disciplines.
               </p>
 
             </div>
